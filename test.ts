@@ -125,7 +125,6 @@ async function deleteRepository(repoName: string, token: string, account: string
     } catch (error) {
         console.error('Произошла ошибка:', error)
     } finally {
-        // Очистка временной директории
         await fs.rm(TEMP_DIR, { recursive: true, force: true })
     }
 })()
